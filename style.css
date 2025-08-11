@@ -1,0 +1,232 @@
+/* Base Reset */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fredoka', sans-serif;
+  background-color: #ffeef1;
+  color: #333;
+}
+
+/* Layout Setup */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  background-color: #ffb6c1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Added this to prevent overlapping or spreading on small screens */
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px; /* Added spacing between items on wrap */
+}
+
+.logo {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-buttons {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-buttons li button {
+  background-color: white;
+  color: #ff4081;
+  border: 1px solid #ff80ab;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.nav-buttons li button:hover {
+  background-color: #ffe4ec;
+}
+
+/* Search */
+.search-wrapper {
+  position: relative;
+  width: 200px;
+  flex-shrink: 0; /* Prevent shrinking on smaller screens */
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 8px 10px 8px 30px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Greeting */
+#greeting {
+  background-color: #fff0f6;
+  color: #d63384;
+  text-align: center;
+  padding: 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* Affirmation Box */
+.affirmation {
+  background-color: #fff0fa;
+  color: #e91e63;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  margin: 1rem auto;
+  max-width: 500px;
+}
+
+/* Mood Form */
+#moodForm {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+}
+
+#moodForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#moodForm input[type="text"]:focus {
+  border-color: #ffb6c1;
+  outline: none;
+}
+
+/* Mood Buttons */
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mood-btn {
+  padding: 10px 16px;
+  background-color: #ff80ab;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.mood-btn:hover {
+  background-color: #f06292;
+}
+
+/* Mood Output */
+#mood-output {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffe4ec;
+  border-left: 4px solid #ff80ab;
+  display: none;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  background-color: #ffe4ec;
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: auto;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+footer li a {
+  text-decoration: none;
+  color: #ff4081;
+  font-weight: bold;
+}
+
+footer li a:hover {
+  color: #e91e63;
+}
+
+/* Corner Character (Buddy in the corner!) */
+.corner-character {
+  position: fixed;
+  bottom: 30px;
+  left: 10px;
+  width: 120px;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .corner-character {
+    width: 90px;
+    bottom: 20px;
+  }
+
+  .mood-btn {
+    padding: 8px 12px;
+  }
+
+  #greeting {
+    font-size: 16px;
+  }
+}

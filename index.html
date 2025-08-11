@@ -1,0 +1,69 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>MoodBooster</title>
+       <link rel="stylesheet" href="style.css">
+       <link rel="icon" href="logo.png" type="image/png" />
+
+
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kakulesheet">
+
+
+
+
+
+
+    </head>
+    <body>
+
+
+ <header>
+  <div class="logo">MoodBooster</div>
+  <nav>
+  
+      <div class="search-wrapper">
+        <input type="text" placeholder="Search...">
+        <span class="search-icon"><i class="fas fa-search"></i></span>
+      </div>
+    </div>
+    <ul class="nav-buttons">
+      <li><button><b>Sign In</b></button></li>
+      <li><button><b>Sign Up</b></button></li>
+    </ul>
+  </nav>
+  </header>
+ 
+
+
+<main>
+  <section id="greeting">
+    <p>Choose a Mood!</p>
+  </section>
+  <form id="moodForm">
+    <input type="text" placeholder="Enter your name..." id="name" required />
+
+    <div class="mood-buttons">
+      <button type="button" class="mood-btn happy" onclick="window.location.href='happy.html'">Happy</button>
+      <button type="button" class="mood-btn sad" onclick="window.location.href='sad.html'">Sad</button>
+      <button type="button" class="mood-btn angry" onclick="window.location.href='angryindex.html'">Angry</button>
+      <button type="button" class="mood-btn bored" onclick="window.location.href='boredindex.html'">Bored</button>
+    </div>
+
+    <div id="mood-output"></div>
+  </form>
+</main>
+
+
+<img src="melody.png.png" class="corner-character" alt="Melody peeking" />
+<footer>
+  <p>&copy; 2025 MoodBooster | Built by Amara(2482503)</p>
+</footer>
+
+<script src="script.js"></script>
+    </body>
+</html>
